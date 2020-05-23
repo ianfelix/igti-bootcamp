@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Color RGB</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bulma-extensions/dist/css/bulma-extensions.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="box">
+      <h1 class="title is-1 is-centered">
+        <span class="tag is-dark is-large">RGB Color Slider</span>
+      </h1>
+      <div class="columns is-centered">
+        <div class="column is-2">
+          <div id="inputred">
+            <div class="labelcenter">
+              <label for="label"
+                ><span class="tag is-danger is-light">Vermelho(R):</span></label
+              >
+            </div>
+
+            <input
+              id="red"
+              class="slider is-fullwidth is-danger"
+              step="1"
+              min="0"
+              max="255"
+              value="0"
+              type="range"
+            />
+
+            <div class="control">
+              <input
+                id="input1"
+                class="input is-static"
+                type="text"
+                value="0"
+                readonly
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- green -->
+        <div class="column is-2">
+          <div id="inputgreen">
+            <div class="labelcenter">
+              <label for="label"
+                ><span class="tag is-success is-light">Verde(G):</span></label
+              >
+            </div>
+
+            <input
+              id="green"
+              class="slider is-fullwidth is-success"
+              step="1"
+              min="0"
+              max="255"
+              value="0"
+              type="range"
+            />
+
+            <div class="control">
+              <input
+                id="input2"
+                class="input is-static"
+                type="text"
+                value="0"
+                readonly
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- blue -->
+        <div class="column is-2">
+          <div id="inputblue">
+            <div class="labelcenter">
+              <label for="label"
+                ><span class="tag is-link is-light">Azul(B):</span></label
+              >
+            </div>
+
+            <input
+              id="blue"
+              class="slider is-fullwidth is-info"
+              step="1"
+              min="0"
+              max="255"
+              value="0"
+              type="range"
+            />
+            <div class="control">
+              <input
+                id="input3"
+                class="input is-static"
+                type="text"
+                value="0"
+                readonly
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered" id="cubo"></div>
+    </div>
+    <script defer src="js/script.js"></script>
+  </body>
+</html>
