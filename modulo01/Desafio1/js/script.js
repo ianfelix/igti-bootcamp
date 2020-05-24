@@ -1,22 +1,16 @@
-window.addEventListener("load", start)
+window.addEventListener("load", () => {
+  doFind();
+  doEach()
+});
 
-function start() {
+function doFind() {
+  const findperson = people.results.some((person) => {
+    return person.location.city === "São Paulo";
+  });
+  console.log(findperson);
 }
 
+function doEach() {
 
-function addText(event) {
-  event.preventDefault();
-
-  var inputText = document.querySelector("input[type=text]").value;
-  var p = document.createElement("p");
-  document.body.appendChild(p).innerHTML = inputText;
+console.log(people.map((person => person.)))
 }
-
-function keyEnter() {
-  if (key == 13) {
-    document.querySelector("input[type=text]").value = "";
-  }
-}
-
-document.querySelector("form").addEventListener("submit", addText);
-document.querySelector("form").addEventListener("keyup", keyEnter);
