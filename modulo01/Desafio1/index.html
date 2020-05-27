@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Verificação de país</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pesquisa de usuário</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
   </head>
+
   <body>
-    <h1>Verificação de nacionalidade Brasileira</h1>
-    Digite o seu país de origem: <input type="text" id="inpText" />
-    <input type="button" value="Enviar" id="inpButton" />
-
-    <div id="text"></div>
-
-    <script src="js/script.js"></script>
+    <form>
+      <div class="field is-grouped">
+        <input class="input is-primary" type="text" placeholder="Text input" />
+        <div class="field">
+          <button class="button is-primary">Buscar</button>
+        </div>
+      </div>
+    </form>
   </body>
 </html>
