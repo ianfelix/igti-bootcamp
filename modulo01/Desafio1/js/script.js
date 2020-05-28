@@ -1,15 +1,26 @@
-window.addEventListener("load", () => {
-  doFetch();
-});
+let allPeople = null;
+let imagePeople = null;
 
-let allPeople = [];
-
-async function doFetch() {
-  const responseData = await fetch(
+function start() {
+  //api
+  getData(
     "https://randomuser.me/api/?seed=javascript&results=100&nat=BR&noinfo"
   );
-
-  const jsonData = await responseData.json();
-  // variável recebe dados da api
-  allPeople = await jsonData.results;
 }
+
+//pegando dados da api
+async function getData(url) {
+  const response = await fetch(url);
+  const dataJson = await response.json();
+  // variável com os dados das pessoas
+  const data = dataJson.results;
+  data.map((user) => {
+    const { name, gender, age, picture } = user;
+
+    allPeople = name;
+  });
+}
+
+console.log(allPeople);
+
+start();

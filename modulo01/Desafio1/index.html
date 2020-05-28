@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Pesquisa de usuário</title>
     <link
       rel="stylesheet"
@@ -15,13 +16,40 @@
   </head>
 
   <body>
-    <form>
+    <h1 class="title is-1">Pesquisa de usuário</h1>
+
+    <form id="form">
       <div class="field is-grouped">
-        <input class="input is-primary" type="text" placeholder="Text input" />
-        <div class="field">
-          <button class="button is-primary">Buscar</button>
-        </div>
+        <p class="control is-expanded">
+          <input
+            id="inp-text"
+            class="input"
+            type="text"
+            placeholder="Find a repository"
+          />
+        </p>
+        <p class="control">
+          <input
+            id="inp-button"
+            type="button"
+            value="Buscar"
+            class="button is-info"
+          />
+        </p>
       </div>
     </form>
+
+    <div class="columns">
+      <div class="column is-6">
+        <div id="people" class="box">sdfasdf</div>
+      </div>
+      <div class="column is-6">
+        <div class="box" id="estatistica">
+          <h2 class="title is-2">Estatística</h2>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="js/script.js"></script>
   </body>
 </html>
