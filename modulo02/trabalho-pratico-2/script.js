@@ -35,7 +35,6 @@ async function creatFile(arrayState) {
 function stateAndCity(cityNumber, id) {
   for (let i = 0; i < cityNumber.length; i++) {
     if (cityNumber[i].Estado === id[i].ID) {
-      
     }
   }
 }
